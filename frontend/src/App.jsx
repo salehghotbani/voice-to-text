@@ -6,10 +6,6 @@ import Fonts from './Fonts';
 import './App.css';
 import theme from './theme';
 import { Route, Routes } from 'react-router-dom';
-import SearchPanel from './ckg/Components/SearchPanel';
-import CKGBody from './ckg/Components/Body';
-import OntologyBody from './ontology/Components/Body';
-import EventExtractionBody from './eventExtraction/Components/Body';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CKG_SECTION } from './BaseAttributes';
 
@@ -40,43 +36,6 @@ function App() {
                 <SearchPanel setShowInsertAndDelete={setShowInsertAndDelete} setIsOnThisPage={setIsOnThisPage}
                              userImage={userImage} setUserImage={setUserImage} objectLabel={objectLabel}
                              setObjectLabel={setObjectLabel} />
-              </motion.div>
-            } />
-            <Route path="/ckg" element={
-              <motion.div
-                key="ckgBody"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <CKGBody setShowInsertAndDelete={setShowInsertAndDelete} setIsOnThisPage={setIsOnThisPage}
-                         userImage={userImage} setUserImage={setUserImage} objectLabel={objectLabel}
-                         setObjectLabel={setObjectLabel} />
-              </motion.div>
-            } />
-            <Route path="/ontology" element={
-              <motion.div
-                key="ontology"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <OntologyBody setOntologyIri={setOntologyIri} ontologyIri={ontologyIri}
-                              setShowInsertAndDelete={setShowInsertAndDelete} setIsOnThisPage={setIsOnThisPage} />
-              </motion.div>
-            } />
-            <Route path="/event-extraction" element={
-              <motion.div
-                key="event-extraction"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <EventExtractionBody setIsOnThisPage={setIsOnThisPage}
-                                     setShowInsertAndDelete={setShowInsertAndDelete} />
               </motion.div>
             } />
           </Routes>

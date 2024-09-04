@@ -25,9 +25,6 @@ app.add_middleware(
 
 Base.metadata.create_all(bind=engine)
 
-prefix = '/monitoring/api'
+prefix = '/sound2text/api/'
 
 app.include_router(server_router, prefix=prefix)
-app.include_router(services_router, prefix=prefix)
-app.include_router(api_router, prefix=prefix)
-app.include_router(base_router, prefix=prefix)
