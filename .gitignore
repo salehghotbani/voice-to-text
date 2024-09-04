@@ -1,2 +1,17 @@
 .idea
+./frontend/node_modules/
+./frontend/logs
+./frontend/*.log
+./frontend/npm-debug.log*
+./frontend/yarn-debug.log*
+./frontend/yarn-error.log*
+./frontend/pnpm-debug.log*
+./frontend/lerna-debug.log*
+
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
 sound_recorder.iml

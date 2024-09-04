@@ -1,0 +1,17 @@
+fastapi
+pydantic
+uvicorn[standard]
+pyyaml
+asyncpg
+ormar
+psycopg2-binary
+requests
+icmplib
+fastapi-pagination
+jdatetime
+python-dateutil
+pytz
+httpx
+python-multipart
+elasticsearch==8.12.1
+elasticsearch-dsl==8.12.0
